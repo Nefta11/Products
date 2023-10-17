@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">Products</string>
+    <string name="description_values">Description</string>
+    <string name="txt_description">Description</string>
+    <string name="txt_brand">Brand</string>
+    <string name="txt_cost">Cost</string>
+    <string name="txt_price">Price</string>
+    <string name="txt_stock">Stock</string>
+    <string name="barcode_value">Barcode</string>
+    <string name="txt_barcode">Barcode</string>
+    <string name="txt_availability">Availability</string>
+    <string name="description_value">Description</string>
+    <string name="brand_value">Brand</string>
+    <string name="cost_value">Cost</string>
+    <string name="price_value">Price</string>
+    <string name="stock_value">Stock</string>
+    <string name="btn_save">Save</string>
+    <string name="btn_update">Update</string>
+    <string name="btn_delete">Delete</string>
+    <string name="save_value">Save</string>
+</resources>

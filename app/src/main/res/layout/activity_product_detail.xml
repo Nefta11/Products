@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="@color/primario">
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/txt_barcode"
+        android:id="@+id/txt_barcode"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/description_value"
+        android:id="@+id/txt_description"
+        android:layout_below="@+id/txt_barcode"
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/brand_value"
+        android:id="@+id/txt_brand"
+        android:layout_below="@id/txt_description"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/cost_value"
+        android:id="@+id/txt_cost"
+        android:layout_below="@id/txt_brand"
+
+        />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_cost"
+        android:hint="@string/price_value"
+        android:id="@+id/txt_price"
+
+        />
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/stock_value"
+        android:id="@+id/txt_stock"
+        android:layout_below="@id/txt_price"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_update"
+        android:id="@+id/btn_update"
+        android:layout_below="@id/txt_stock"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/black"
+        android:backgroundTint="@color/botones"
+
+        />
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/btn_delete"
+        android:id="@+id/btn_delete"
+        android:layout_below="@id/txt_stock"
+        android:layout_marginTop="5dp"
+        android:textColorHint="@color/black"
+        android:layout_alignParentEnd="true"
+        android:backgroundTint="@color/botones"
+
+        />
+
+
+
+</RelativeLayout>
