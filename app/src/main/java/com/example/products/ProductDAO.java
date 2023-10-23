@@ -17,6 +17,7 @@ public class ProductDAO {
     }
     public boolean insertProduct(Product product){
         boolean result = false;
+        db=dbHelper.getWritableDatabase();
         ContentValues values = new ContentValues();
         values.put(GroceriesContract.Product.COLUMN_NAME_BARCODE,product.getBarcode());
         values.put(GroceriesContract.Product.COLUMN_NAME_DESCRIPTION,product.getDescription());
@@ -25,7 +26,7 @@ public class ProductDAO {
         values.put(GroceriesContract.Product.COLUMN_NAME_PRICE,product.getPrice());
         values.put(GroceriesContract.Product.COLUMN_NAME_STOCK,product.getStock());
 
-
+        long newRowId=db.insert(GroceriesContract.Product.TABLE_NAME,null,values);
         return result;
     }
 
