@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
     private EditText txtStock;
     private Button btnSave;
     private ListView lvProducts;
+    private Product product;
     GroceriesDbHelper dbHelper=new GroceriesDbHelper(this);
 
     @Override
@@ -36,7 +37,13 @@ public class MainActivity extends AppCompatActivity {
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+              product= new Product();
+              product.setBarcode(txtBarcode.getText().toString());
+              product.setDescription(txtDescription.getText().toString());
+              product.setBrand(txtBrand.getText().toString());
+              product.setCost(Float.parseFloat(txtCost.getText().toString()));
+              product.setPrice(Float.parseFloat(txtPrice.getText().toString()));
+              product.setStock(Integer.parseInt(txtStock.getText().toString()));
             }
         });
     }

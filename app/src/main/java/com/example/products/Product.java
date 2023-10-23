@@ -4,9 +4,9 @@ public class Product {
     private String barcode;
     private String description;
     private String brand;
-    private String cost;
-    private String price;
-    private String stock;
+    private float cost;
+    private float price;
+    private int stock;
 
     public String getBarcode() {
         return barcode;
@@ -32,27 +32,27 @@ public class Product {
         this.brand = brand;
     }
 
-    public String getCost() {
+    public float getCost() {
         return cost;
     }
 
-    public void setCost(String cost) {
+    public void setCost(float cost) {
         this.cost = cost;
     }
 
-    public String getPrice() {
+    public float getPrice() {
         return price;
     }
 
-    public void setPrice(String price) {
+    public void setPrice(float price) {
         this.price = price;
     }
 
-    public String getStock() {
+    public int getStock() {
         return stock;
     }
 
-    public void setStock(String stock) {
+    public void setStock(int stock) {
         this.stock = stock;
     }
 }
