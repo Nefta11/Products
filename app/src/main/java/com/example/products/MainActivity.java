@@ -46,6 +46,9 @@ public class MainActivity extends AppCompatActivity {
               product.setCost(Float.parseFloat(txtCost.getText().toString()));
               product.setPrice(Float.parseFloat(txtPrice.getText().toString()));
               product.setStock(Integer.parseInt(txtStock.getText().toString()));
+              if (productDAO.insertProduct(product)) {
+
+              }
             }
         });
     }
