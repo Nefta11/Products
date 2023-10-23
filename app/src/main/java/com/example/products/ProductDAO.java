@@ -27,6 +27,8 @@ public class ProductDAO {
         values.put(GroceriesContract.Product.COLUMN_NAME_STOCK,product.getStock());
 
         long newRowId=db.insert(GroceriesContract.Product.TABLE_NAME,null,values);
+        if(newRowId!=-1)
+            result=true;
         return result;
     }
 
