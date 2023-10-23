@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btnSave;
     private ListView lvProducts;
     private Product product;
+    private ProductDAO productDAO;
     GroceriesDbHelper dbHelper=new GroceriesDbHelper(this);
 
     @Override
