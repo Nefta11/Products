@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
     private ListView lvProducts;
     GroceriesDbHelper dbHelper=new GroceriesDbHelper(this);
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
