@@ -3,6 +3,7 @@ package com.example.products;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
@@ -32,5 +33,11 @@ public class MainActivity extends AppCompatActivity {
         txtStock=findViewById(R.id.txt_stock);
         btnSave=findViewById(R.id.btn_save);
         lvProducts=findViewById(R.id.lv_products);
+        btnSave.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
     }
 }
