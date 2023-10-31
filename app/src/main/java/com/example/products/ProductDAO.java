@@ -3,6 +3,7 @@ package com.example.products;
 import android.content.ComponentName;
 import android.content.ContentValues;
 import android.content.Context;
+import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 
 import java.util.ArrayList;
@@ -41,6 +42,18 @@ public class ProductDAO {
             GroceriesContract.Product.COLUMN_NAME_BARCODE
 
         };
+        Cursor cursor =db.query(
+          GroceriesContract.Product.TABLE_NAME,
+          projection,
+          null,
+          null,
+          null,
+          null,
+          null
+        );
+        while (cursor.moveToNext()) {
+            result.add(cursor.getString(0));
+        }
         return result;
     }
 
