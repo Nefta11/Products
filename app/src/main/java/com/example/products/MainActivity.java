@@ -54,6 +54,7 @@ public class MainActivity extends AppCompatActivity {
               product.setStock(Integer.parseInt(txtStock.getText().toString()));
               if (productDAO.insertProduct(product)==true) {
                   Toast.makeText(MainActivity.this, "Producto almancebado con éxito...", Toast.LENGTH_SHORT).show();
+                  updateList();
               }else{
                   Toast.makeText(MainActivity.this, "Servidor no disponible", Toast.LENGTH_SHORT).show();
               }
