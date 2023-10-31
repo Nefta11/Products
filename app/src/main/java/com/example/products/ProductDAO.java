@@ -5,6 +5,8 @@ import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 
+import java.util.ArrayList;
+
 //Se programan todos los metodos como guardar, eliminar, editar, etc.
 public class ProductDAO {
 
@@ -32,6 +34,11 @@ public class ProductDAO {
         return result;
     }
 
+    public ArrayList<String> getAllProducts(){
+        ArrayList<String> result= new ArrayList<String>();
+        db = dbHelper.getReadableDatabase();
+        return result;
+    }
 
 
 
