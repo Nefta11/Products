@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -42,6 +43,14 @@ public class MainActivity extends AppCompatActivity {
         lvProducts=findViewById(R.id.lv_products);
         productDAO=new ProductDAO(this);
         updateList();
+        lvProducts.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String barcode=(String) lvProducts.getItemAtPosition(i);
+                Toast.makeText(MainActivity.this,barcode, Toast.LENGTH_SHORT).show();
+            }
+        });
+
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
