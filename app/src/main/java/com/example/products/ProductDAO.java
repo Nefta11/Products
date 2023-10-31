@@ -37,6 +37,10 @@ public class ProductDAO {
     public ArrayList<String> getAllProducts(){
         ArrayList<String> result= new ArrayList<String>();
         db = dbHelper.getReadableDatabase();
+        String[] projection={
+            GroceriesContract.Product.COLUMN_NAME_BARCODE
+
+        };
         return result;
     }
 
