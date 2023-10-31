@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         btnSave=findViewById(R.id.btn_save);
         lvProducts=findViewById(R.id.lv_products);
         productDAO=new ProductDAO(this);
+        updateList();
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,5 +62,7 @@ public class MainActivity extends AppCompatActivity {
     }
     protected void updateList(){
     dataOrigin=productDAO.getAllBarcodes();
+    adapter= new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,dataOrigin);
+    lvProducts.setAdapter(adapter);
     }
 }
