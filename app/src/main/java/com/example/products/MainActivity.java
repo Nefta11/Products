@@ -66,4 +66,14 @@ public class MainActivity extends AppCompatActivity {
     adapter= new ArrayAdapter<String>(this, androidx.appcompat.R.layout.support_simple_spinner_dropdown_item,dataOrigin);
     lvProducts.setAdapter(adapter);
     }
+    protected void clearFields(){
+        txtBarcode.setText("");
+        txtDescription.setText("");
+        txtBrand.setText("");
+        txtCost.setText("");
+        txtPrice.setText("");
+        txtStock.setText("");
+        txtBarcode.requestFocus();
+    }
+
 }
