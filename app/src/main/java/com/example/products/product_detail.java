@@ -10,5 +10,7 @@ public class product_detail extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_product_detail);
+        String barcode=getIntent().getExtras().getString("barcode");
+
     }
 }

@@ -2,6 +2,7 @@ package com.example.products;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
@@ -47,7 +48,9 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String barcode=(String) lvProducts.getItemAtPosition(i);
-                Toast.makeText(MainActivity.this,barcode, Toast.LENGTH_SHORT).show();
+                Intent intent = new Intent(MainActivity.this, product_detail.class);
+                intent.putExtra("barcode",barcode);
+                startActivity(intent);
             }
         });
 
