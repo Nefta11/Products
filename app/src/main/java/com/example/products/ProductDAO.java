@@ -35,7 +35,7 @@ public class ProductDAO {
         return result;
     }
 
-    public ArrayList<String> getAllProducts(){
+    public ArrayList<String> getAllBarcodes(){
         ArrayList<String> result= new ArrayList<String>();
         db = dbHelper.getReadableDatabase();
         String[] projection={
@@ -54,6 +54,7 @@ public class ProductDAO {
         while (cursor.moveToNext()) {
             result.add(cursor.getString(0));
         }
+        cursor.close();
         return result;
     }
 
