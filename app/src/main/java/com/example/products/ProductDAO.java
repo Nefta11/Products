@@ -58,6 +58,12 @@ public class ProductDAO {
         return result;
     }
 
+public Product getProductByBarcode(String barcode){
 
+        Product result = null;
+        db= dbHelper.getReadableDatabase();
+
+        return  result;
+}
 
 }
