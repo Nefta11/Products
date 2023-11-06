@@ -12,5 +12,6 @@ public class product_detail extends AppCompatActivity {
         setContentView(R.layout.activity_product_detail);
         String barcode=getIntent().getExtras().getString("barcode");
 
+
     }
 }
