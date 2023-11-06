@@ -76,7 +76,12 @@ public Product getProductByBarcode(String barcode){
 
         if (cursor.moveToNext()){
         result=new Product();
-
+        result.setBarcode(cursor.getString(0));
+        result.setDescription(cursor.getString(1));
+        result.setBrand(cursor.getString(2));
+        result.setCost(cursor.getFloat(3));
+        result.setPrice(cursor.getFloat(4));
+        result.setStock(cursor.getInt(5));
     }
 
         return  result;
