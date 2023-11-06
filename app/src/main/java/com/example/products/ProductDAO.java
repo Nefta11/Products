@@ -62,6 +62,22 @@ public Product getProductByBarcode(String barcode){
 
         Product result = null;
         db= dbHelper.getReadableDatabase();
+        String selection= GroceriesContract.Product.COLUMN_NAME_BARCODE + "= ?";
+        String[] selectionArgs={barcode};
+        Cursor cursor = db.query(
+                GroceriesContract.Product.TABLE_NAME,
+                null,
+                selection,
+                selectionArgs,
+                null,
+                null,
+                null
+        );
+
+        if (cursor.moveToNext()){
+        result=new Product();
+
+    }
 
         return  result;
 }
