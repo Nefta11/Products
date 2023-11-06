@@ -83,7 +83,7 @@ public Product getProductByBarcode(String barcode){
         result.setPrice(cursor.getFloat(4));
         result.setStock(cursor.getInt(5));
     }
-
+        cursor.close();
         return  result;
 }
 
