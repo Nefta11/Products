@@ -36,5 +36,14 @@ public class product_detail extends AppCompatActivity {
         productDAO= new ProductDAO(this);
         product=productDAO.getProductByBarcode(barcode);
 
+        if(product!=null){
+        txtBarcode.setText(product.getBarcode());
+        txtDescription.setText(product.getDescription());
+        txtBrand.setText(product.getBrand());
+        txtCost.setText(String.valueOf(product.getCost()));
+        txtPrice.setText(String.valueOf(product.getPrice()));
+        txtStock.setText(String.valueOf(product.getStock()));
+        }
+
     }
 }
